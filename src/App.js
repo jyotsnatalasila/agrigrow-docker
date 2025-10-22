@@ -41,7 +41,7 @@ function App() {
   return (
     <LocationProvider> 
       <Router>
-        <Routes basename="/agrigrowfe">
+        <Routes basename="/agrigrowfe/">
           {/* Public Routes */}
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
