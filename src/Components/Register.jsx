@@ -29,7 +29,7 @@ const Register = () => {
         password,
       });
       setSuccess(res.data?.message || "Registered successfully");
-      setTimeout(() => navigate("/login"), 1500);
+      setTimeout(() => navigate("#/login"), 1500);
     } catch (err) {
       const errorMessage = err.response?.data?.error || err.response?.data?.message || "Registration failed!";
       setError(errorMessage);
