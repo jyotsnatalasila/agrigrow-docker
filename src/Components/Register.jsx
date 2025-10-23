@@ -23,12 +23,11 @@ const Register = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:1010/agrigrowbe/api/auth/register", {
+      const res = await axios.post("http://localhost:1011/agrigrowbe/api/auth/register", {
         username,
         email,
         password,
       });
-      // Backend returns { message: "User registered successfully" } on 200 OK
       setSuccess(res.data?.message || "Registered successfully");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
