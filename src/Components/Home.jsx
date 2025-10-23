@@ -201,12 +201,12 @@ function CategoryGrid() {
   const { darkTheme } = useLocationContext();
   
   const CATEGORY_CARDS = [
-    { title: "Paddy/Rice", image: process.env.PUBLIC_URL +"/Images/paddy.jpg", link: ".#/Rice" },
-    { title: "Maize/Corn", image: process.env.PUBLIC_URL +"/Images/maize.webp", link: ".#/Corn" },
-    { title: "Spices", image: process.env.PUBLIC_URL +"/Images/spices.jpg", link: ".#/Spices" },
-    { title: "Grams/Pulses", image: process.env.PUBLIC_URL +"/Images/pulses.webp", link: ".#/Pulses" },
-    { title: "Indoor Plants", image: process.env.PUBLIC_URL +"/Images/plants.jpg", link: ".#/IndoorPlants" },
-    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/Sapplings.jpg", link: ".#/Sapplings" },
+    { title: "Paddy/Rice", image: process.env.PUBLIC_URL +"/Images/paddy.jpg", link: "#/Rice" },
+    { title: "Maize/Corn", image: process.env.PUBLIC_URL +"/Images/maize.webp", link: "#/Corn" },
+    { title: "Spices", image: process.env.PUBLIC_URL +"/Images/spices.jpg", link: "#/Spices" },
+    { title: "Grams/Pulses", image: process.env.PUBLIC_URL +"/Images/pulses.webp", link: "#/Pulses" },
+    { title: "Indoor Plants", image: process.env.PUBLIC_URL +"/Images/plants.jpg", link: "#/IndoorPlants" },
+    { title: "Saplings", image: process.env.PUBLIC_URL +"/Images/Sapplings.jpg", link: "#/Sapplings" },
   ];
 
   return (
