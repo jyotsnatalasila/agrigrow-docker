@@ -29,7 +29,8 @@ const Register = () => {
         password,
       });
       setSuccess(res.data?.message || "Registered successfully");
-      setTimeout(() => navigate("#/login"), 1500);
+      // FIX: Use HashRouter navigation with hash
+      setTimeout(() => navigate("/#/login"), 1500);
     } catch (err) {
       const errorMessage = err.response?.data?.error || err.response?.data?.message || "Registration failed!";
       setError(errorMessage);
@@ -90,7 +91,7 @@ const Register = () => {
           {["Home", "Services", "Contact", "About", "Login"].map((link) => (
             <a
               key={link}
-              href={`#/${link.toLowerCase()}`}
+              href={`#/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`} // FIX: Home should go to #/
               style={{
                 color: "white",
                 fontWeight: "bold",
@@ -104,7 +105,7 @@ const Register = () => {
                 (e.currentTarget.style.backgroundColor =
                   "rgba(255, 255, 255, 0.2)")
               }
-              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "none")}
+              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "transparent")} // FIX: Use transparent
             >
               {link}
             </a>
@@ -278,7 +279,7 @@ const Register = () => {
           <div style={{ marginTop: "14px", fontSize: "13px", textAlign: "center" }}>
             Already have an account?{" "}
             <a
-              href={process.env.PUBLIC_URL + '/#/login'}
+              href="#/login" // FIX: Simple hash navigation
               style={{
                 color: "#2e7d32",
                 textDecoration: "none",
