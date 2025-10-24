@@ -23,7 +23,7 @@ const Register = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:1011/agrigrowbe/api/auth/register", {
+      const res = await axios.post("http://ec2-13-48-31-208.eu-north-1.compute.amazonaws.com/agrigrowbe/api/auth/register", {
         username,
         email,
         password,
