@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 // Base URL configuration
-const API_BASE_URL = 'http://ec2-13-48-31-208.eu-north-1.compute.amazonaws.com/agrigrowbe';
+const API_BASE_URL = 'http://ec2-16-16-179-64.eu-north-1.compute.amazonaws.com:1010/agrigrowbe';
 
 function Contact() {
   const [formData, setFormData] = useState({ 
