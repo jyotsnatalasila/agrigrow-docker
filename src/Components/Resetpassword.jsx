@@ -31,7 +31,7 @@ const ResetPassword = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        `/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
+        `1010/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
         { password: newPassword }
       );
 
