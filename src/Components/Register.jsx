@@ -23,12 +23,13 @@ const Register = () => {
     }
     setLoading(true);
     try {
-      await axios.post("/agrigrowbe/api/auth/register", {
+      const res = await axios.post("/agrigrowbe/api/auth/register", {
         username,
         email,
         password,
-      });
-      setSuccess(res.data?.message || "Registered successfully");
+  });
+    setSuccess(res.data?.message || "Registered successfully");
+
       // FIX: Use HashRouter navigation with hash
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
