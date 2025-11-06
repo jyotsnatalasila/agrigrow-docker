@@ -23,7 +23,7 @@ const Register = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://agrigrowbe-backend:1010/agrigrowbe/api/auth/register", {
+      await axios.post("/agrigrowbe/api/auth/register", {
         username,
         email,
         password,
