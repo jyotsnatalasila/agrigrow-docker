@@ -30,10 +30,10 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post(
-        `1010/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
-        { password: newPassword }
-      );
+    const res = await axios.post(
+  `http://ec2-13-62-223-118.eu-north-1.compute.amazonaws.com:1010/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
+  { password: newPassword }
+);
 
       setSuccess(res.data?.message || "Password reset successfully");
       setTimeout(() => navigate("/login"), 2000);
