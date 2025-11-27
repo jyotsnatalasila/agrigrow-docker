@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:1010/agrigrowbe/api/auth/login", {
+      const res = await axios.post("http://ec2-13-62-223-118.eu-north-1.compute.amazonaws.com/agrigrowbe/api/auth/login", {
         email,
         password,
       });
