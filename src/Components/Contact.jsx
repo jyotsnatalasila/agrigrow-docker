@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 // Base URL configuration
-const API_BASE_URL = 'http://localhost:1010/agrigrowbe';
+const API_BASE_URL = 'http://const res = await axios.post(
+  `http://ec2-13-62-223-118.eu-north-1.compute.amazonaws.com:1010/agrigrowbe/api/password/reset?token=${encodeURIComponent(token)}`,
+  { password: newPassword }
+);
+:1010/agrigrowbe';
 
 function Contact() {
   const [formData, setFormData] = useState({ 
